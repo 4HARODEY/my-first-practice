@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authors page</title>
+</head>
+<body>
+<h1>Authors</h1>
+
+<ul>
+    {% for author in authors %}
+    <li>
+        <h2>Publisher: {{ author.username }}</h2>
+        <p>Email: {{ author.email }}</p>
+        <p>Posts number: {{ author.num_posts }}</p>
+        {% if not forloop.last %}
+        <hr>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
